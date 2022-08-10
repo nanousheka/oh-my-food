@@ -1,0 +1,48 @@
+@use 'variables';
+
+//BASE
+    //Flex 
+    @mixin inline-flex-mid{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    @mixin flex-mid{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    @mixin flex-column{
+        display:flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+//COMPONENTS
+    //Cards tags settings
+    @mixin card-tag-settings($card__tags){
+    
+        position: absolute;
+        top: 20px;
+        right: 10px;
+        border-radius: 2px;
+        
+
+        @each $state, $settings in $card__tags{
+            &--#{$state}::before{
+            color: map-get($settings,color);
+            background-color: map-get($settings,background-color);
+            content: map-get($settings,content);
+            padding: 0.4em 0.5em;}
+        }
+    }
+
+    
+
+//PAGES
+    //Containers settings
+    @mixin section ($direction: column){
+        padding: 50px 20px 30px 20px;
+        display: flex;
+        flex-direction: $direction;
+    }

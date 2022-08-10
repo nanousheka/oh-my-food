@@ -1,0 +1,22 @@
+@use '../utils';
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    background-color: utils.$charocal-1;
+    padding: 30px 20px;
+    &__white-logo{
+        margin-bottom: 20px;
+        font-size: 1.2rem;
+    }
+    &__nav-link{
+        color: white;
+        margin-bottom: 10px;
+        font-size: 1rem;
+        // text-decoration: none;
+        i{
+            width: 20px;
+            margin-right: 10px;
+        }
+    }
+}

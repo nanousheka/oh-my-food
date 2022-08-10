@@ -1,0 +1,48 @@
+//ALL COLORS PALETTE
+    $blue-magenta: #9356DC;
+    $magenta: #FF79DA;
+    $green-cyan: #99E2D0;
+    $gray1: #eaeaea;
+    $gray2: #f6f6f6;
+    $charocal-1: #353535;
+
+//MAIN THEME COLORS
+    $primary-color: $blue-magenta;
+    $secondary-color: $magenta;
+    $tertiary-color: $green-cyan;
+
+    //Gradients
+    $gradient170: linear-gradient(170deg,$secondary-color,$primary-color);
+    
+    /*Backgrounds*/
+    $primary-background-color: white;
+    $secondary-background-color: $gray1;
+    $tertiary-background-color: $gray2;
+    
+    /*Couleur des textes des boutons*/
+    $btn-color-1: white;
+
+//COMPONENTS
+
+    //Cards description height
+    $card-desc-height: 80px;
+    //Card-tags
+    //This map contains the ::before card-tags styles depending on modifiers(new,hot,feature).
+    $new-color: $green-cyan;
+    $hot-color: $magenta;
+    $feature-color: $blue-magenta;
+
+    $card__tags: (
+        new:(
+            color:darken($new-color,40%),
+            background-color:$new-color,
+            content:"Nouveau"),
+        hot:(
+            color:darken($hot-color,40%),
+            background-color:$hot-color,
+            content:"Meilleures ventes"),
+        feature:(
+            color:darken($feature-color,40%),
+            background-color:$feature-color,
+            content:"Choix de l'équipe")
+    )

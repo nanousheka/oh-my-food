@@ -1,0 +1,41 @@
+@use '../utils';
+@use 'icons';
+@use 'tags';
+
+.card {
+    position: relative;
+    height: 250px;
+    border-radius: 15px;
+    background-color: utils.$primary-background-color;
+    box-shadow: 4px 4px 15px -3px darken(utils.$primary-background-color,20%);
+    &__infos{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: utils.$card-desc-height;
+        padding-left: 15px;
+        padding-right: 30px;
+        &__icon{
+            @extend .gradient-icon;
+        }
+    }
+    &__img{
+        width: 100%;
+        height: calc(100% - utils.$card-desc-height);
+        object-fit: cover;
+        border-radius: 15px 15px 0 0;
+    }
+    &__description{
+        @include utils.flex-column;
+        height: 100%;
+        &__nom{
+            font-weight: 800;
+        }
+    }
+    &__tag{
+        @extend .card__tag;
+        &--new{
+            @extend .card__tag--new;
+        }
+    }
+}

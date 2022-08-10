@@ -1,0 +1,10 @@
+@use '../utils';
+
+//These are the tags (new, hot, favorite...) that are used above the card image.
+//Please manually add the modifier to html.
+.card__tag {
+    height: fit-content;
+    width: fit-content;
+    font-weight: 600;
+    @include utils.card-tag-settings(utils.$card__tags);
+}

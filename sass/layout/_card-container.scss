@@ -1,0 +1,6 @@
+@use '../utils';
+
+.cards-container{
+    @include utils.flex-column;
+    grid-gap: 20px;
+}

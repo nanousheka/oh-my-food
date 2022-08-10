@@ -1,0 +1,13 @@
+@use '../utils';
+
+.rounded-btn {
+    @include utils.inline-flex-mid;
+    width: 225px;
+    height: 3.5em;
+    font-size: 1rem;
+    color: utils.$btn-color-1;
+    border-radius: 30px;
+    border-width: 0;
+    border-color: transparent;
+    background: utils.$gradient170;
+    }
