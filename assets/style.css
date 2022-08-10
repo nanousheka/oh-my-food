@@ -446,6 +446,13 @@ a {
   border-color: transparent;
   background: linear-gradient(170deg, #FF79DA, #9356DC);
 }
+.rounded-btn:hover, .accroche__btn:hover {
+  filter: brightness(105%);
+  box-shadow: 0px 0px 10px #909090;
+}
+.rounded-btn:focus, .accroche__btn:focus {
+  box-shadow: 0px 0px 10px #909090;
+}
 
 .step, .fontionnement__step {
   display: flex;
@@ -555,7 +562,7 @@ a {
 .header__form input::placeholder {
   color: black;
   font-size: 1.1rem;
-  letter-spacing: 0.9px;
+  letter-spacing: 0.9;
   font-weight: 600;
 }
 
