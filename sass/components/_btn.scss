@@ -15,6 +15,7 @@
         box-shadow: 0px 0px 10px darken(utils.$tertiary-background-color,40%);
     }
     &:focus{
+        filter: brightness(105%);
         box-shadow: 0px 0px 10px darken(utils.$tertiary-background-color,40%);
     }
     }
