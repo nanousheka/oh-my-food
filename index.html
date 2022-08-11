@@ -14,97 +14,108 @@
     <body>
         <header class="header">
             <div class="header__logo"><img src="./assets/img/logo.png" alt="logo"></div>
-            <div class="header__form"><i class="fa fa-map-marker-alt"></i><form><input type="text" placeholder="Paris, Belleville" name="adresse"></form></div>
+            <div class="header__form">
+                <i class="fa fa-map-marker-alt"></i>
+                <form><input type="text" placeholder="Paris, Belleville" name="adresse"></form>
+            </div>
 
         </header>
 
+        <div class="hero">
+            <section class="accroche">
+                <h2 class="accroche__titre">Réservez le menu qui vous convient</h2>
+                <p class="accroche__paragraphe">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+                <a class="accroche__btn" href="#restaurants">Explorer nos restaurants</a>
+            </section>
+        </div>
+
         <main class="home-page-content">
-            <div class="hero">
-                <section class="accroche">
-                    <h2 class="accroche__titre">Réservez le menu qui vous convient</h2>
-                    <p class="accroche__paragraphe">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-                    <a class="accroche__btn" href="#restaurants">Explorer nos restaurants</a>
-                </section>
-            </div>
             
-                <section class="fontionnement">
-                    <h2 class="section__heading fonctionnement__heading fonctionnement__heading--hidden">Fonctionnement</h2>
-                    <div class="fonctionnement__steps-container">
-                        <div class="fontionnement__step">
-                            <div class="step__numerotation">1</div>
-                            <i class="fa-solid fa-mobile-screen"></i>
-                            <p class="step__description">Choisissez un restaurant</p>
-                        </div>
-                        <div class="fontionnement__step">
-                            <div class="step__numerotation">2</div>
-                            <i class="fa-solid fa-list"></i>
-                            <p class="step__description">Composez votre menu</p>
-                        </div>
-                        <div class="fontionnement__step">
-                            <div class="step__numerotation">3</div>
-                            <i class="fa-solid fa-store"></i>
-                            <p class="step__description">Dégustez au restaurant</p>
+            
+                <section class="fonctionnement">
+                    <div class="section-content">
+                        <h2 class="fonctionnement__heading">Fonctionnement</h2>
+                        <div class="fonctionnement__steps-container fonctionnement__steps-container--row">
+                            <div class="fonctionnement__step">
+                                <div class="step__numerotation">1</div>
+                                <i class="fa-solid fa-mobile-screen"></i>
+                                <p class="step__description">Choisissez un restaurant</p>
+                            </div>
+                            <div class="fonctionnement__step">
+                                <div class="step__numerotation">2</div>
+                                <i class="fa-solid fa-list"></i>
+                                <p class="step__description">Composez votre menu</p>
+                            </div>
+                            <div class="fonctionnement__step">
+                                <div class="step__numerotation">3</div>
+                                <i class="fa-solid fa-store"></i>
+                                <p class="step__description">Dégustez au restaurant</p>
+                            </div>
                         </div>
                     </div>
+                    
                     
                 </section>
 
             <section class="restaurants" id="restaurants">
-                <h2 class="section__heading restaurants__title">Restaurants</h2>
-                <div class="cards-container">
-                    <div class="card">
-                        <img class="card__img" src="/assets/img/laPaletteDuGout.jpg" alt="">
-                        <div class="card__infos">
-                            <div class="card__description">
-                                <h3 class="card__description__nom">La Palette du Goût</h3>
-                                <p class="card__description__adresse">Ménilmontant</p>
+                <div class="section-content">
+                    <h2 class="restaurants__heading">Restaurants</h2>
+                    <div class="restaurants__cards-container">
+                        <div class="card">
+                            <img class="card__img" src="/assets/img/laPaletteDuGout.jpg" alt="">
+                            <div class="card__infos">
+                                <div class="card__description">
+                                    <h3 class="card__description__nom">La Palette du Goût</h3>
+                                    <p class="card__description__adresse">Ménilmontant</p>
+                                </div>
+                                <a href="#"><i class="card__infos__icon fa-solid fa-heart"></i></a>
+                            
                             </div>
-                            <a href="#"><i class="card__infos__icon fa-solid fa-heart"></i></a>
-                        
+                            <div class=" card__tag card__tag--new"></div>
                         </div>
-                        <div class=" card__tag card__tag--new"></div>
-                    </div>
-
-                    <div class="card">
-                        <img class="card__img" src="/assets/img/laNoteEnchantee.jpg" alt="">
-                        <div class="card__infos">
-                            <div class="card__description">
-                                <h3 class="card__description__nom">La Note enchantée</h3>
-                                <p class="card__description__adresse">Charonnne</p>
+    
+                        <div class="card">
+                            <img class="card__img" src="/assets/img/laNoteEnchantee.jpg" alt="">
+                            <div class="card__infos">
+                                <div class="card__description">
+                                    <h3 class="card__description__nom">La Note enchantée</h3>
+                                    <p class="card__description__adresse">Charonnne</p>
+                                </div>
+                                <a href="#"><i class="card__infos__icon fa-solid fa-heart"></i></a>
+                            
                             </div>
-                            <a href="#"><i class="card__infos__icon fa-solid fa-heart"></i></a>
-                        
+                            <div class=" card__tag card__tag--new"></div>
                         </div>
-                        <div class=" card__tag card__tag--new"></div>
-                    </div>
-
-                    <div class="card">
-                        <img class="card__img" src="/assets/img/aLaFrancaise.jpg" alt="">
-                        <div class="card__infos">
-                            <div class="card__description">
-                                <h3 class="card__description__nom">A la Française</h3>
-                                <p class="card__description__adresse">Citée Rouge</p>
+    
+                        <div class="card">
+                            <img class="card__img" src="/assets/img/aLaFrancaise.jpg" alt="">
+                            <div class="card__infos">
+                                <div class="card__description">
+                                    <h3 class="card__description__nom">A la Française</h3>
+                                    <p class="card__description__adresse">Citée Rouge</p>
+                                </div>
+                                <a href="#"><i class="card__infos__icon fa-solid fa-heart"></i></a>
+                            
                             </div>
-                            <a href="#"><i class="card__infos__icon fa-solid fa-heart"></i></a>
-                        
+                            <!-- <div class=" card__tag card__tag--new"></div> -->
                         </div>
-                        <!-- <div class=" card__tag card__tag--new"></div> -->
-                    </div>
-
-                    <div class="card">
-                        <img class="card__img" src="/assets/img/leDeliceDesSens.jpg" alt="">
-                        <div class="card__infos">
-                            <div class="card__description">
-                                <h3 class="card__description__nom">Le délice des sens</h3>
-                                <p class="card__description__adresse">Folie-Méricourt</p>
+    
+                        <div class="card">
+                            <img class="card__img" src="/assets/img/leDeliceDesSens.jpg" alt="">
+                            <div class="card__infos">
+                                <div class="card__description">
+                                    <h3 class="card__description__nom">Le délice des sens</h3>
+                                    <p class="card__description__adresse">Folie-Méricourt</p>
+                                </div>
+                                <a href="#"><i class="card__infos__icon fa-solid fa-heart"></i></a>
+                            
                             </div>
-                            <a href="#"><i class="card__infos__icon fa-solid fa-heart"></i></a>
-                        
+                            <!-- <div class=" card__tag card__tag--new"></div> -->
                         </div>
-                        <!-- <div class=" card__tag card__tag--new"></div> -->
+    
                     </div>
-
                 </div>
+               
 
             </section>
         

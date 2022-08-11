@@ -309,6 +309,8 @@ template {
   display: none;
 }
 
+/*Backgrounds*/
+/*Couleur des textes des boutons*/
 @font-face {
   font-family: "Shrikhand";
   src: url("./font/Shrikhand-Regular.ttf") format("truetype");
@@ -336,8 +338,13 @@ h2 {
   font-size: 1.6rem;
 }
 
-.section__heading, .fontionnement__heading, .restaurants__title {
+.section__heading, .fonctionnement__heading, .restaurants__heading {
   margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .section__heading--hidden {
+    display: none;
+  }
 }
 
 h3 {
@@ -356,8 +363,13 @@ a {
   text-decoration: none;
 }
 
-/*Backgrounds*/
-/*Couleur des textes des boutons*/
+@media screen and (min-width: 992px) {
+  .section-content {
+    width: 1200px;
+    margin: auto;
+  }
+}
+
 .gradient-icon, .card__infos__icon {
   display: inline-flex;
   align-items: center;
@@ -410,6 +422,11 @@ a {
   background-color: white;
   box-shadow: 4px 4px 15px -3px #cccccc;
 }
+@media screen and (min-width: 768px) {
+  .card {
+    width: 350px;
+  }
+}
 .card__infos {
   display: flex;
   align-items: center;
@@ -455,7 +472,7 @@ a {
   box-shadow: 0px 0px 10px #909090;
 }
 
-.step, .fontionnement__step {
+.step, .fonctionnement__step {
   display: flex;
   align-items: center;
   height: 80px;
@@ -465,7 +482,7 @@ a {
   background-color: #f6f6f6;
   box-shadow: 2px 4px 10px #dddddd;
 }
-.step i, .fontionnement__step i {
+.step i, .fonctionnement__step i {
   color: gray;
   font-size: 1.4rem;
   margin-right: 23px;
@@ -567,11 +584,22 @@ a {
   font-weight: 600;
 }
 
-.cards-container {
+.cards-container, .restaurants__cards-container {
   display: flex;
   justify-content: center;
   flex-direction: column;
   grid-gap: 20px;
+}
+@media screen and (min-width: 768px) {
+  .cards-container, .restaurants__cards-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 992px) {
+  .cards-container, .restaurants__cards-container {
+    grid-gap: 40px;
+  }
 }
 
 .footer {
@@ -601,7 +629,7 @@ a {
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    padding: 50px;
+    padding: 0 90px;
   }
 }
 
@@ -618,6 +646,13 @@ a {
     max-width: 40%;
   }
 }
+@media screen and (min-width: 992px) {
+  .accroche {
+    height: 400px;
+    width: 500px;
+    justify-content: center;
+  }
+}
 .accroche__titre {
   text-align: center;
   margin-bottom: 15px;
@@ -625,6 +660,11 @@ a {
 @media screen and (min-width: 768px) {
   .accroche__titre {
     color: white;
+  }
+}
+@media screen and (min-width: 992px) {
+  .accroche__titre {
+    font-size: 45px;
   }
 }
 .accroche__paragraphe {
@@ -638,34 +678,50 @@ a {
     color: white;
   }
 }
+@media screen and (min-width: 992px) {
+  .accroche__paragraphe {
+    font-size: 1.5rem;
+    padding-bottom: 30px;
+  }
+}
 .accroche__btn {
   margin: 15px 0;
 }
 
-.fontionnement {
+.fonctionnement {
   padding: 50px 20px 30px 20px;
   display: flex;
   flex-direction: column;
   padding-top: 50px;
 }
-@media screen and (min-width: 768px) {
-  .fontionnement__heading--hidden {
-    display: none;
-  }
-}
-.fontionnement__steps-container {
+.fonctionnement__steps-container {
   display: flex;
   flex-direction: column;
 }
 @media screen and (min-width: 768px) {
-  .fontionnement__steps-container {
+  .fonctionnement__steps-container--row {
     flex-direction: row;
+    justify-content: space-between;
   }
 }
+@media screen and (min-width: 768px) {
+  .fonctionnement__step {
+    width: 220px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .fonctionnement__step {
+    width: 300px;
+  }
+}
+
 .restaurants {
   padding: 50px 20px 30px 20px;
   display: flex;
   flex-direction: column;
   padding-bottom: 50px;
   background-color: #f6f6f6;
+}
+.restaurants__cards-container {
+  justify-content: start;
 }/*# sourceMappingURL=style.css.map */

@@ -3,4 +3,11 @@
 .cards-container{
     @include utils.flex-column;
     grid-gap: 20px;
+    @include utils.tablet-screen{
+       flex-direction: row;
+       flex-wrap: wrap;
+    }
+    @include utils.desktop-screen{
+        grid-gap: 40px;
+    }
 }

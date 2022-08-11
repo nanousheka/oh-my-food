@@ -1,2 +1,8 @@
 @use '../utils';
 
+.section-content{
+    @include utils.desktop-screen{
+        width: 1200px;
+        margin: auto;
+    }
+}

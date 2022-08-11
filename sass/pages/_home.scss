@@ -1,6 +1,7 @@
 @use '../utils';
 @use '../components';
 @use '../base';
+@use '../layout';
 
 .hero{
     
@@ -10,7 +11,7 @@
         background-repeat: no-repeat;
         display: flex;
         flex-direction: column;
-        padding: 50px;
+        padding: 0 90px;
     }
 }
 
@@ -23,11 +24,19 @@
         //align-items: start;
         max-width: 40%;
     }
+    @include utils.desktop-screen{
+        height: 400px;
+        width: 500px;
+        justify-content: center;
+    }
     &__titre{
         text-align: center;
         margin-bottom: 15px;
         @include utils.tablet-screen{
             color: white;
+        }
+        @include utils.desktop-screen{
+            font-size: 45px;
         }
     }
     &__paragraphe{
@@ -38,6 +47,10 @@
         @include utils.tablet-screen{
             color: white;
         }
+        @include utils.desktop-screen{
+            font-size: 1.5rem;
+            padding-bottom: 30px;
+        }
     }
     &__btn{
         @extend .rounded-btn;
@@ -45,30 +58,31 @@
     }
 }
 
-.fontionnement{
+.fonctionnement{
     @include utils.section;
     padding-top: 50px;
-    
     &__heading{
+        //cf: '_typography'
         @extend .section__heading;
-        &--hidden{
-            @include utils.tablet-screen {
-                display: none;
-            }
-        }
-        
     }
-
     &__steps-container{
         display: flex;
         flex-direction: column;
-        @include utils.tablet-screen {
-            flex-direction: row;
+        &--row{
+            @include utils.tablet-screen {
+                flex-direction: row;
+                justify-content: space-between;
+            }
         }
     }
-
     &__step{
-        @extend .step
+        @extend .step;
+        @include utils.tablet-screen {
+            width: 220px;
+        }
+        @include utils.desktop-screen{
+            width: 300px;
+        }
     }
 }
 
@@ -76,7 +90,11 @@
     @include utils.section;
     padding-bottom: 50px;
     background-color: utils.$gray2;
-    &__title{
+    &__heading{
         @extend .section__heading;
+    }
+    &__cards-container{
+        @extend .cards-container;
+        justify-content: start;
     }
 }

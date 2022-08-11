@@ -1,3 +1,5 @@
+@use '../utils';
+
 @font-face{
     font-family: "Shrikhand";
     src: url("./font/Shrikhand-Regular.ttf") format("truetype");
@@ -27,6 +29,11 @@ h2{
 }
 .section__heading{
     margin-bottom: 30px;
+    &--hidden{
+        @include utils.tablet-screen {
+            display: none;
+        }
+    }
 }
 
 h3{

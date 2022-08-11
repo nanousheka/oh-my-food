@@ -1,4 +1,5 @@
 @use 'variables';
+@use 'media-queries';
 
 //BASE
     //Flex 
@@ -41,7 +42,7 @@
 
 //PAGES
     //Containers settings
-    @mixin section ($direction: column){
+    @mixin section($direction: column){
         padding: 50px 20px 30px 20px;
         display: flex;
         flex-direction: $direction;
