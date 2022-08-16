@@ -1,0 +1,147 @@
+@use '../utils';
+@use '../components';
+@use '../base';
+@use '../layout';
+
+
+.restaurant__header{
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    padding: 30px 30px;
+    &__nav{
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+    &__home__button > i{
+        font-size: 20px;
+        transform: scale(1.2);
+    }
+    &__logo{
+        height: 35px;
+        position: absolute;
+        left: calc(50% - 100px);
+    }
+}
+
+.restaurant__img{
+    width: 100%;
+    height: 250px;
+    background-image: url("/assets/img/laPaletteDuGout.jpg");
+    background-size: cover;
+}
+
+.menu{
+    padding: 30px 20px;
+    border-radius: 25px 25px 0 0;
+    background-color: utils.$tertiary-background-color;
+    position: relative;
+    top: -30px;
+}
+
+.menu__header{
+    display: flex;
+    margin-bottom: 20px;
+    &__restaurant-name{
+        font-size: 32px;
+        margin-right: 30px;
+    }
+    &__favourite-icon{
+        @include utils.inline-flex-mid;
+        @extend .gradient-icon;
+    }
+}
+
+.menu__category{
+    &__header{
+        position: relative;
+        text-transform: uppercase;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-size: 22px;
+        &::before{
+            content: "";
+            position: absolute;
+            bottom: -8px;
+            width: 55px;
+            height: 4px;
+            background-color: utils.$tertiary-color;
+        }
+    }
+}
+
+.menu__dishes-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    padding: 20px 0;
+    grid-gap: 20px;
+}
+
+.menu__dish{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    border-radius: 20px;
+    background-color: white;
+    padding: 20px 20px;
+    box-shadow: 3px 3px 15px -3px darken(utils.$primary-background-color,20%);
+    &__description{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    &__title{
+        font-weight: 800;
+        font-size: 20px;
+        margin-bottom: 2px;
+    }
+    &__details{
+        font-size: 18px;
+    }
+    &__price{
+        display: inline-flex;
+        position: absolute;
+        align-items: end;
+        padding-bottom: 40px;
+        height: 100%;
+        right: 20px;
+        font-weight: 800;
+        font-size: 20px;
+        &:hover{
+            opacity: 0;
+            z-index: -1;
+            &:hover + .menu__dish__price__selection{
+                z-index: 1;
+                //transform: scaleX(1);
+                //transition: transform 250ms;
+            }
+        }
+        &__selection{
+            width: 70px;
+            height: 100%;
+            border-radius: 0 20px 20px 0;
+            background-color: utils.$tertiary-color;
+            position: absolute;
+            right: 0;
+            z-index: -1
+        }
+    }
+}
+.menu__dish__price__selection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //transform: scaleX(0);
+   // transform-origin: right;
+    & i{
+        display: inline-flex;
+        color: white;
+        font-size: 20px;
+    }
+}
+    

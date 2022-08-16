@@ -2,6 +2,10 @@
 @use 'icons';
 @use 'tags';
 
+.clickable__card{
+    display: inline-flex;
+}
+
 .card {
     position: relative;
     height: 250px;
@@ -40,5 +44,8 @@
         &--new{
             @extend .card__tag--new;
         }
+    }
+    &:hover{
+        box-shadow: 0px 0px 15px 1px darken(utils.$primary-background-color,30%);
     }
 }
