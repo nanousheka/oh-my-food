@@ -371,16 +371,17 @@ a {
 }
 
 .gradient-icon, .card__infos__icon {
-  display: inline-flex;
-  align-items: center;
-  color: transparent;
+  display: inline-block;
+  position: relative;
   font-size: 20px;
-  transform: scale(0.8, 1);
+  background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-stroke-width: 1px;
+  -webkit-text-fill-color: white;
   -webkit-text-stroke-color: black;
 }
 .gradient-icon:hover, .card__infos__icon:hover {
-  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  background: linear-gradient(170deg, #FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -580,7 +581,7 @@ a {
 .header__form input::placeholder {
   color: black;
   font-size: 1.1rem;
-  letter-spacing: 0.9;
+  letter-spacing: 0.9px;
   font-weight: 600;
 }
 

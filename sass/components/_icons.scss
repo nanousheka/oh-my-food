@@ -4,18 +4,40 @@
 
 //Icon filled with linear gradient on hover
 .gradient-icon{
-    display: inline-flex;
-            align-items: center;
-            color: transparent;
-            font-size: 20px;
-            transform: scale(0.8, 1);
-            -webkit-text-stroke-width: 1px;
-            -webkit-text-stroke-color: black;
-            &:hover{
-                background: -webkit-linear-gradient(utils.$primary-color,utils.$secondary-color);
-                background-clip: text;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                -webkit-text-stroke-color: transparent;
-            }
+    display: inline-block;
+    position: relative;
+    //background-color: transparent;
+    font-size: 20px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-color: black;
+    &:hover{
+        background: utils.$gradient170;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-color: transparent;
+    
+        // &::after{
+        //     transform: scaleY(1);
+        // }
+    }
+    // &::after{
+    //     content: "\f004";
+    //     position: absolute;
+    //     top: 0;
+    //     right: 0;
+    //     bottom: 0;
+    //     left: 0;
+    //     background: utils.$gradient170;
+    //     background-clip: text;
+    //     -webkit-background-clip: text;
+    //     -webkit-text-fill-color: transparent;
+    //     -webkit-text-stroke-color: transparent;
+    //     transform: scaleY(0);
+    //     transform-origin: bottom;
+    //     transition: transform 500ms ;
+    //}
 }
