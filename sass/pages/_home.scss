@@ -104,6 +104,9 @@
 
 .restaurants{
     @include utils.section;
+    @include utils.tablet-screen{
+        padding: 50px 40px;
+    }
     padding-bottom: 50px;
     background-color: utils.$gray2;
     &__heading{
