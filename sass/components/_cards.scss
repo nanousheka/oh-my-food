@@ -11,6 +11,9 @@
     @include utils.tablet-screen{
         width: 330px;
     }
+    @include utils.desktop-screen{
+        width: 345px;
+    }
     &__infos{
         display: flex;
         align-items: center;

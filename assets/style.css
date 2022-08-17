@@ -429,6 +429,11 @@ a {
     width: 330px;
   }
 }
+@media screen and (min-width: 992px) {
+  .card {
+    width: 345px;
+  }
+}
 .card__infos {
   display: flex;
   align-items: center;
