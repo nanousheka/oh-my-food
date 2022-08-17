@@ -1,0 +1,8 @@
+@keyframes left-slide {
+    from{
+        transform: scaleX(0);
+    }
+    to{
+        transform: scaleX(1);
+    }
+}
