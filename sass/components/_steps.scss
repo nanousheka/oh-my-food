@@ -9,6 +9,9 @@
     border-radius: 20px;
     background-color: utils.$tertiary-background-color;
     box-shadow: 2px 4px 10px darken(utils.$tertiary-background-color,10%);
+    @include utils.tablet-screen{
+        border-radius: 15px;
+    }
     i{
         color: gray; 
         font-size: 1.4rem;

@@ -488,6 +488,11 @@ a {
   background-color: #f6f6f6;
   box-shadow: 2px 4px 10px #dddddd;
 }
+@media screen and (min-width: 768px) {
+  .step, .fonctionnement__step {
+    border-radius: 15px;
+  }
+}
 .step i, .fonctionnement__step i {
   color: gray;
   font-size: 1.4rem;
