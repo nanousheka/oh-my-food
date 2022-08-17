@@ -17,6 +17,7 @@
     }
     @include utils.desktop-screen{
         height: 550px;
+        background-size: cover;
     }
     &__container{
         max-width: 1200px;

@@ -665,6 +665,7 @@ a {
 @media screen and (min-width: 992px) {
   .hero {
     height: 550px;
+    background-size: cover;
   }
 }
 .hero__container {
@@ -964,6 +965,5 @@ body {
     margin-bottom: 100px;
     border-radius: 0 0 20px 20px;
     max-width: 768px;
-    margin: auto;
   }
 }/*# sourceMappingURL=style.css.map */
