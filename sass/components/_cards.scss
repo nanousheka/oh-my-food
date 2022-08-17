@@ -9,7 +9,7 @@
     background-color: utils.$primary-background-color;
     box-shadow: 4px 4px 15px -3px darken(utils.$primary-background-color,20%);
     @include utils.tablet-screen{
-        width: 350px;
+        width: 330px;
     }
     &__infos{
         display: flex;
