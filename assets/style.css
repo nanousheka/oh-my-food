@@ -417,10 +417,6 @@ a {
   padding: 0.4em 0.5em;
 }
 
-.clickable__card {
-  display: inline-flex;
-}
-
 .card {
   position: relative;
   height: 250px;
@@ -460,7 +456,7 @@ a {
   box-shadow: 0px 0px 15px 1px #b3b3b3;
 }
 
-.rounded-btn, .accroche__btn {
+.rounded-btn, .menu__order-btn, .accroche__btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -473,11 +469,11 @@ a {
   border-color: transparent;
   background: linear-gradient(170deg, #FF79DA, #9356DC);
 }
-.rounded-btn:hover, .accroche__btn:hover {
+.rounded-btn:hover, .menu__order-btn:hover, .accroche__btn:hover {
   filter: brightness(105%);
   box-shadow: 0px 0px 10px #909090;
 }
-.rounded-btn:focus, .accroche__btn:focus {
+.rounded-btn:focus, .menu__order-btn:focus, .accroche__btn:focus {
   filter: brightness(105%);
   box-shadow: 0px 0px 10px #909090;
 }
@@ -498,6 +494,16 @@ a {
   margin-right: 23px;
   margin-left: 10px;
 }
+@media screen and (min-width: 768px) {
+  .step i, .fonctionnement__step i {
+    margin-left: 0px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .step i, .fonctionnement__step i {
+    margin-left: 10px;
+  }
+}
 .step__numerotation {
   display: inline-flex;
   justify-content: center;
@@ -511,6 +517,14 @@ a {
   position: relative;
   left: -0.75rem;
 }
+@media screen and (min-width: 768px) {
+  .step__numerotation {
+    font-size: 1rem;
+    min-width: 2rem;
+    min-height: 2rem;
+    left: -1rem;
+  }
+}
 .step__description {
   font-weight: 600;
   font-size: 1.125rem;
@@ -521,6 +535,7 @@ a {
   max-width: 100%;
   display: flex;
   flex-direction: column;
+  background-color: white;
 }
 @media screen and (min-width: 768px) {
   .header {
@@ -632,15 +647,28 @@ a {
   margin-right: 10px;
 }
 
+.hero {
+  display: flex;
+  justify-content: center;
+}
 @media screen and (min-width: 768px) {
   .hero {
     background-image: url("../assets/img/hero-image.jpg");
-    background-size: cover;
+    background-size: auto 540px;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    padding: 0 90px;
+    height: 400px;
+    padding: 0 60px;
   }
+}
+@media screen and (min-width: 992px) {
+  .hero {
+    height: 550px;
+  }
+}
+.hero__container {
+  max-width: 1200px;
 }
 
 .accroche {
@@ -704,6 +732,11 @@ a {
   flex-direction: column;
   padding-top: 50px;
 }
+@media screen and (min-width: 768px) {
+  .fonctionnement {
+    padding: 50px 40px 30px 40px;
+  }
+}
 .fonctionnement__steps-container {
   display: flex;
   flex-direction: column;
@@ -711,12 +744,18 @@ a {
 @media screen and (min-width: 768px) {
   .fonctionnement__steps-container--row {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: start;
+    grid-gap: 30px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .fonctionnement__steps-container--row {
+    grid-gap: 40px;
   }
 }
 @media screen and (min-width: 768px) {
   .fonctionnement__step {
-    width: 220px;
+    width: 200px;
   }
 }
 @media screen and (min-width: 992px) {
@@ -736,6 +775,20 @@ a {
   justify-content: start;
 }
 
+body {
+  background-color: #eaeaea;
+}
+
+@media screen and (min-width: 992px) {
+  .page__container {
+    margin: auto;
+    margin-top: 100px;
+    max-width: 768px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 20px #d1d1d1;
+  }
+}
+
 .restaurant__header {
   max-width: 100%;
   display: flex;
@@ -743,6 +796,13 @@ a {
   justify-content: start;
   align-items: center;
   padding: 30px 30px;
+  background-color: white;
+}
+@media screen and (min-width: 992px) {
+  .restaurant__header {
+    border-radius: 20px 20px 0 0;
+    padding-top: 50px;
+  }
 }
 .restaurant__header__nav {
   display: flex;
@@ -762,18 +822,32 @@ a {
 .restaurant__img {
   width: 100%;
   height: 250px;
-  background-image: url("/assets/img/laPaletteDuGout.jpg");
-  background-size: cover;
+  object-fit: cover;
+  position: relative;
+  z-index: -1;
+}
+@media screen and (min-width: 768px) {
+  .restaurant__img {
+    height: 380px;
+  }
 }
 
 .menu {
+  display: flex;
+  flex-direction: column;
   padding: 30px 20px;
   border-radius: 25px 25px 0 0;
   background-color: #f6f6f6;
-  position: relative;
-  top: -30px;
+  margin-top: -30px;
 }
-
+@media screen and (min-width: 992px) {
+  .menu {
+    max-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px;
+  }
+}
 .menu__header {
   display: flex;
   margin-bottom: 20px;
@@ -787,7 +861,18 @@ a {
   align-items: center;
   justify-content: center;
 }
+.menu__order-btn {
+  font-size: 18px;
+}
+.menu__order__section {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 15px;
+}
 
+.menu__category {
+  margin-bottom: 30px;
+}
 .menu__category__header {
   position: relative;
   text-transform: uppercase;
@@ -826,6 +911,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  width: calc(100% - 80px);
 }
 .menu__dish__title {
   font-weight: 800;
@@ -871,4 +957,13 @@ a {
   display: inline-flex;
   color: white;
   font-size: 20px;
+}
+
+@media screen and (min-width: 992px) {
+  .restaurant__footer {
+    margin-bottom: 100px;
+    border-radius: 0 0 20px 20px;
+    max-width: 768px;
+    margin: auto;
+  }
 }/*# sourceMappingURL=style.css.map */

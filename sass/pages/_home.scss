@@ -4,14 +4,22 @@
 @use '../layout';
 
 .hero{
-    
+    display: flex;
+    justify-content: center;
     @include utils.tablet-screen{
         background-image: url("../assets/img/hero-image.jpg");
-        background-size: cover;
+        background-size: auto 540px;
         background-repeat: no-repeat;
         display: flex;
         flex-direction: column;
-        padding: 0 90px;
+        height: 400px;
+        padding: 0 60px;
+    }
+    @include utils.desktop-screen{
+        height: 550px;
+    }
+    &__container{
+        max-width: 1200px;
     }
 }
 
@@ -61,6 +69,9 @@
 .fonctionnement{
     @include utils.section;
     padding-top: 50px;
+    @include utils.tablet-screen{
+        padding: 50px 40px 30px 40px;
+    }
     &__heading{
         //cf: '_typography'
         @extend .section__heading;
@@ -71,14 +82,18 @@
         &--row{
             @include utils.tablet-screen {
                 flex-direction: row;
-                justify-content: space-between;
+                justify-content: start;
+                grid-gap: 30px;
+            }
+            @include utils.desktop-screen{
+                grid-gap: 40px;
             }
         }
     }
     &__step{
         @extend .step;
         @include utils.tablet-screen {
-            width: 220px;
+            width: 200px;
         }
         @include utils.desktop-screen{
             width: 300px;

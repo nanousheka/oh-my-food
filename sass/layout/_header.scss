@@ -4,6 +4,7 @@
     max-width: 100%;
     display: flex;
     flex-direction: column;
+    background-color: white;
     @include utils.tablet-screen{
         flex-direction: row;
         justify-content: space-between;
