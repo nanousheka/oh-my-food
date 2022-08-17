@@ -490,7 +490,12 @@ a {
 }
 @media screen and (min-width: 768px) {
   .step, .fonctionnement__step {
-    border-radius: 15px;
+    border-radius: 10px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .step, .fonctionnement__step {
+    border-radius: 20px;
   }
 }
 .step i, .fonctionnement__step i {
