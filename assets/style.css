@@ -380,18 +380,33 @@ a {
 }
 
 .gradient-icon, .menu__header__favourite-icon, .card__infos__icon {
-  color: transparent;
-  -webkit-text-stroke: 1px black;
-  width: 25px;
-  height: 25px;
-}
-.gradient-icon::after, .menu__header__favourite-icon::after, .card__infos__icon::after {
-  content: "";
+  color: black;
   width: 30px;
   height: 30px;
   background: linear-gradient(170deg, #FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-size: 100% 0%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px black;
+}
+.gradient-icon:hover, .menu__header__favourite-icon:hover, .card__infos__icon:hover {
+  animation: fill-background 800ms ease-in-out forwards;
 }
 
+@keyframes fill-background {
+  0% {
+    background-size: 100% 0%;
+  }
+  1%, 100% {
+    -webkit-text-stroke: 1px transparent;
+  }
+  100% {
+    background-size: 100% 100%;
+  }
+}
 .card__tag {
   height: fit-content;
   width: fit-content;

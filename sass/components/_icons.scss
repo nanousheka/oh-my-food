@@ -4,16 +4,30 @@
 
 //Icon filled with linear gradient on hover
 .gradient-icon{
-    color: transparent;
+    color:black;
+    width: 30px;
+    height: 30px;
+    background: utils.$gradient170;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-size: 100% 0%;
+    background-position: bottom ;
+    background-repeat: no-repeat;
+    -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1px black;
-    width: 25px;
-    height: 25px;
-
-    &::after{
-        content:"";
-        width: 30px;
-        height: 30px;
-        background: utils.$gradient170;
+    &:hover{
+        animation: fill-background 800ms ease-in-out forwards;
     }
+}
 
+@keyframes fill-background{
+    0%{
+        background-size: 100% 0%;
+    }
+    1%, 100%{
+        -webkit-text-stroke: 1px transparent;
+    }
+    100%{
+        background-size: 100% 100%;
+    }
 }
