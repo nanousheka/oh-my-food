@@ -3,6 +3,58 @@
 @use '../base';
 @use '../layout';
 
+.loading__spinner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0;
+    animation: loading-spinner 3s ease-out;
+    //PB: background ne change pas en no-repeat et de position: bottom
+    & .spinner-icon{
+        font-size: 100px;
+        background-size: 100% 0%;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background: utils.$gradient170;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: fill-spinner-icon 3s ease-in-out;
+
+    }
+}
+
+@keyframes loading-spinner{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes fill-spinner-icon{
+    0%{
+        background-size: 100% 0%;
+    }
+    100%{
+        background-size: 100% 100%;
+    }
+}
+
+@keyframes fade-out{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
 .hero{
     display: flex;
     justify-content: center;
