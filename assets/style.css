@@ -400,7 +400,7 @@ a {
   0% {
     background-size: 100% 0%;
   }
-  1%, 100% {
+  0.5%, 100% {
     -webkit-text-stroke: 1px transparent;
   }
   100% {
@@ -926,6 +926,42 @@ body {
   height: 4px;
   background-color: #99E2D0;
 }
+.menu__category--entrees:hover > .menu__dishes-container:nth-child(1) :not(.menu__dish__selection) {
+  animation: slide-up 0.5s ease-in-out 0.2s forwards;
+}
+.menu__category--entrees:hover > .menu__dishes-container:nth-child(2) :not(.menu__dish__selection) {
+  animation: slide-up 0.6s ease-in-out 0.4s forwards;
+}
+.menu__category--entrees:hover > .menu__dishes-container:nth-child(3) :not(.menu__dish__selection) {
+  animation: slide-up 0.7s ease-in-out 0.5s forwards;
+}
+.menu__category--entrees:hover > .menu__dishes-container:nth-child(4) :not(.menu__dish__selection) {
+  animation: slide-up 0.8s ease-in-out 0.7s forwards;
+}
+.menu__category--mains:hover > .menu__dishes-container:nth-child(1) :not(.menu__dish__selection) {
+  animation: slide-up 0.5s ease-in-out 0.2s forwards;
+}
+.menu__category--mains:hover > .menu__dishes-container:nth-child(2) :not(.menu__dish__selection) {
+  animation: slide-up 0.6s ease-in-out 0.4s forwards;
+}
+.menu__category--mains:hover > .menu__dishes-container:nth-child(3) :not(.menu__dish__selection) {
+  animation: slide-up 0.7s ease-in-out 0.5s forwards;
+}
+.menu__category--mains:hover > .menu__dishes-container:nth-child(4) :not(.menu__dish__selection) {
+  animation: slide-up 0.8s ease-in-out 0.7s forwards;
+}
+.menu__category--desserts:hover > .menu__dishes-container:nth-child(1) :not(.menu__dish__selection) {
+  animation: slide-up 0.5s ease-in-out 0.2s forwards;
+}
+.menu__category--desserts:hover > .menu__dishes-container:nth-child(2) :not(.menu__dish__selection) {
+  animation: slide-up 0.6s ease-in-out 0.4s forwards;
+}
+.menu__category--desserts:hover > .menu__dishes-container:nth-child(3) :not(.menu__dish__selection) {
+  animation: slide-up 0.7s ease-in-out 0.5s forwards;
+}
+.menu__category--desserts:hover > .menu__dishes-container:nth-child(4) :not(.menu__dish__selection) {
+  animation: slide-up 0.8s ease-in-out 0.7s forwards;
+}
 
 .menu__dishes-container {
   display: flex;
@@ -939,66 +975,108 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-height: 80px;
   position: relative;
   border-radius: 20px;
   background-color: white;
-  padding: 20px 20px;
   box-shadow: 3px 3px 15px -3px #cccccc;
+  overflow: hidden;
+  transform: translateY(10px);
 }
 .menu__dish__description {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  width: calc(100% - 80px);
+  padding-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
 }
 .menu__dish__title {
+  display: inline-flex;
   font-weight: 800;
   font-size: 20px;
   margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: nowrap;
+  margin-right: 2px;
 }
 .menu__dish__details {
+  display: inline-flex;
   font-size: 18px;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-right: 2px;
 }
 .menu__dish__price {
-  display: inline-flex;
-  position: absolute;
+  display: flex;
   align-items: end;
-  padding-bottom: 40px;
   height: 100%;
-  right: 20px;
+  width: 70px;
   font-weight: 800;
   font-size: 20px;
+  background-color: white;
+  position: absolute;
+  right: 0px;
+  bottom: 21px;
+  transition: 0.3s linear 0.3s;
 }
-.menu__dish__price:hover {
-  z-index: 1;
-}
-.menu__dish__price:hover:hover + .menu__dish__price__selection {
-  z-index: 2;
-  transform: scaleX(1);
-}
-.menu__dish__price__selection {
+.menu__dish__selection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 70px;
   height: 100%;
   border-radius: 0 20px 20px 0;
   background-color: #99E2D0;
   position: absolute;
-  right: 0;
+  transform: translateX(70px);
+  transition: 0.3s ease-in-out 0.3s;
+  right: 0px;
+  z-index: 2;
+  transform-origin: right;
+}
+.menu__dish:hover .menu__dish__price {
+  transform: translateX(-65px);
+}
+.menu__dish:hover .menu__dish__selection {
+  transform: translateX(0);
+}
+.menu__dish:hover i {
+  animation: rotate 0.5s ease-out 0.5s;
 }
 
-.menu__dish__price__selection {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 500ms;
-}
-.menu__dish__price__selection i {
+.menu__dish__selection i {
   display: inline-flex;
   color: white;
   font-size: 20px;
 }
 
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes slide-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes slide-up {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 @media screen and (min-width: 992px) {
   .restaurant__footer {
     margin-bottom: 100px;
