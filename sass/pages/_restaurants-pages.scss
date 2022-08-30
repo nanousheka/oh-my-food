@@ -114,41 +114,50 @@ body{
         }
     }
     //PB: forwards ne fonctionne pas quand je ne suis plus en hover et l'animation ne prend en compte que le :nth-child(2).
-    &--entrees:hover > .menu__dishes-container:nth-child(1) :not(.menu__dish__selection){
+    &--entrees:hover .menu__dishes-container{
+        animation: category-opacity 1.0s ease-in-out;
+    }
+    &--entrees:hover  .menu__dish--1{
+        animation: slide-up 0.5s ease-in-out 0.2s both;
+    }
+    &--entrees:hover  .menu__dish--2{
+        animation: slide-up 0.4s ease-in-out 0.4s both;
+    }
+    &--entrees:hover  .menu__dish--3{
+        animation: slide-up 0.4s ease-in-out 0.6s both;
+    }
+    &--entrees:hover  .menu__dish--4{
+        animation: slide-up 0.3s ease-in-out 0.7s both;
+    }
+    &--mains:hover  .menu__dish--1{
         animation: slide-up 0.5s ease-in-out 0.2s forwards;
     }
-    &--entrees:hover > .menu__dishes-container:nth-child(2) :not(.menu__dish__selection){
-        animation: slide-up 0.6s ease-in-out 0.4s forwards;
+    &--mains:hover .menu__dishes-container{
+        animation: category-opacity 1.0s ease-in-out;
     }
-    &--entrees:hover > .menu__dishes-container:nth-child(3) :not(.menu__dish__selection){
-        animation: slide-up 0.7s ease-in-out 0.5s forwards;
+    &--mains:hover  .menu__dish--2{
+        animation: slide-up 0.4s ease-in-out 0.4s forwards;
     }
-    &--entrees:hover > .menu__dishes-container:nth-child(4) :not(.menu__dish__selection){
-        animation: slide-up 0.8s ease-in-out 0.7s forwards;
+    &--mains:hover  .menu__dish--3{
+        animation: slide-up 0.4s ease-in-out 0.6s forwards;
     }
-    &--mains:hover > .menu__dishes-container:nth-child(1) :not(.menu__dish__selection){
+    &--mains:hover  .menu__dish--4{
+        animation: slide-up 0.3s ease-in-out 0.7s forwards;
+    }
+    &--desserts:hover .menu__dishes-container{
+        animation: category-opacity 1.0s ease-in-out;
+    }
+    &--desserts:hover  .menu__dish--1{
         animation: slide-up 0.5s ease-in-out 0.2s forwards;
     }
-    &--mains:hover > .menu__dishes-container:nth-child(2) :not(.menu__dish__selection){
-        animation: slide-up 0.6s ease-in-out 0.4s forwards;
+    &--desserts:hover  .menu__dish--2{
+        animation: slide-up 0.4s ease-in-out 0.4s forwards;
     }
-    &--mains:hover > .menu__dishes-container:nth-child(3) :not(.menu__dish__selection){
-        animation: slide-up 0.7s ease-in-out 0.5s forwards;
+    &--desserts:hover  .menu__dish--3{
+        animation: slide-up 0.4s ease-in-out 0.6s forwards;
     }
-    &--mains:hover > .menu__dishes-container:nth-child(4) :not(.menu__dish__selection){
-        animation: slide-up 0.8s ease-in-out 0.7s forwards;
-    }
-    &--desserts:hover > .menu__dishes-container:nth-child(1) :not(.menu__dish__selection){
-        animation: slide-up 0.5s ease-in-out 0.2s forwards;
-    }
-    &--desserts:hover > .menu__dishes-container:nth-child(2) :not(.menu__dish__selection){
-        animation: slide-up 0.6s ease-in-out 0.4s forwards;
-    }
-    &--desserts:hover > .menu__dishes-container:nth-child(3) :not(.menu__dish__selection){
-        animation: slide-up 0.7s ease-in-out 0.5s forwards;
-    }
-    &--desserts:hover > .menu__dishes-container:nth-child(4) :not(.menu__dish__selection){
-        animation: slide-up 0.8s ease-in-out 0.7s forwards;
+    &--desserts:hover  .menu__dish--4{
+        animation: slide-up 0.3s ease-in-out 0.7s forwards;
     }
 }
 
@@ -169,7 +178,6 @@ body{
     background-color: white;
     box-shadow: 3px 3px 15px -3px darken(utils.$primary-background-color,20%);
     overflow: hidden;
-    transform: translateY(10px);
     &__description{
         display: flex;
         flex-direction: column;
@@ -267,6 +275,12 @@ body{
     }
     100%{
         transform: translateY(0);
+    }
+}
+
+@keyframes category-opacity{
+    0%, 20%{
+        opacity: 0;
     }
 }
 
