@@ -4,22 +4,28 @@
 @use '../layout';
 
 
+//This is the default layout of the menus.
 
 body{
+    //cf. sass\utils\_variables.scss
     background-color: utils.$secondary-background-color;
+    @debug utils.$secondary-background-color;
+
 }
 
 .page__container{
+    //cf. sass\utils\_media-queries.scss
     @include utils.desktop-screen{
         margin: auto;
         margin-top: 100px;
         max-width: 768px;
         border-radius: 20px;
+        //cf. sass\utils\_variables.scss
         box-shadow: 2px 2px 20px darken(utils.$secondary-background-color,10%);
     }
 }
 
-
+//This is the main header of the page.
 .restaurant__header{
     max-width: 100%;
     display: flex;
@@ -28,6 +34,7 @@ body{
     align-items: center;
     padding: 30px 30px;
     background-color: white;
+    //cf. sass\utils\_media-queries.scss
     @include utils.desktop-screen{
         border-radius: 20px 20px 0 0;
         padding-top: 50px;
@@ -55,6 +62,7 @@ body{
     object-fit: cover;
     position: relative;
     z-index: -1;
+    //cf. sass\utils\_media-queries.scss
     @include utils.tablet-screen{
         height: 380px;
     }
@@ -65,8 +73,10 @@ body{
     flex-direction: column;
     padding: 30px 20px;
     border-radius: 25px 25px 0 0;
+    //cf. sass\utils\_variables.scss
     background-color: utils.$tertiary-background-color;
     margin-top: -30px;
+    //cf. sass\utils\_media-queries.scss
     @include utils.desktop-screen{
         max-width: 768px;
         margin-left: auto;
@@ -82,11 +92,13 @@ body{
             margin-right: 30px;
         }
         &__favourite-icon{
+            //cf. sass\components\_icons.scss
             @extend .gradient-icon;
             font-size: 22px;
         }
     }
     &__order-btn{
+        //cf. sass\components\_btn.scss
         @extend .rounded-btn;
         font-size: 18px;
     }
