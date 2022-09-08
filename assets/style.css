@@ -984,43 +984,43 @@ body {
   animation: slide-up 0.5s ease-in-out 0.2s both;
 }
 .menu__category--entrees:hover .menu__dish--2 {
-  animation: slide-up 0.4s ease-in-out 0.4s both;
+  animation: slide-up 0.5s ease-in-out 0.4s both;
 }
 .menu__category--entrees:hover .menu__dish--3 {
-  animation: slide-up 0.4s ease-in-out 0.6s both;
+  animation: slide-up 0.5s ease-in-out 0.6s both;
 }
 .menu__category--entrees:hover .menu__dish--4 {
-  animation: slide-up 0.3s ease-in-out 0.7s both;
-}
-.menu__category--mains:hover .menu__dish--1 {
-  animation: slide-up 0.5s ease-in-out 0.2s forwards;
+  animation: slide-up 0.5s ease-in-out 0.8s both;
 }
 .menu__category--mains:hover .menu__dishes-container {
   animation: category-opacity 1s ease-in-out;
 }
+.menu__category--mains:hover .menu__dish--1 {
+  animation: slide-up 0.5s ease-in-out 0.2s both;
+}
 .menu__category--mains:hover .menu__dish--2 {
-  animation: slide-up 0.4s ease-in-out 0.4s forwards;
+  animation: slide-up 0.5s ease-in-out 0.4s both;
 }
 .menu__category--mains:hover .menu__dish--3 {
-  animation: slide-up 0.4s ease-in-out 0.6s forwards;
+  animation: slide-up 0.5s ease-in-out 0.6s both;
 }
 .menu__category--mains:hover .menu__dish--4 {
-  animation: slide-up 0.3s ease-in-out 0.7s forwards;
+  animation: slide-up 0.5s ease-in-out 0.8s both;
 }
 .menu__category--desserts:hover .menu__dishes-container {
   animation: category-opacity 1s ease-in-out;
 }
 .menu__category--desserts:hover .menu__dish--1 {
-  animation: slide-up 0.5s ease-in-out 0.2s forwards;
+  animation: slide-up 0.5s ease-in-out 0.2s both;
 }
 .menu__category--desserts:hover .menu__dish--2 {
-  animation: slide-up 0.4s ease-in-out 0.4s forwards;
+  animation: slide-up 0.5s ease-in-out 0.4s both;
 }
 .menu__category--desserts:hover .menu__dish--3 {
-  animation: slide-up 0.4s ease-in-out 0.6s forwards;
+  animation: slide-up 0.5s ease-in-out 0.6s both;
 }
 .menu__category--desserts:hover .menu__dish--4 {
-  animation: slide-up 0.3s ease-in-out 0.7s forwards;
+  animation: slide-up 0.5s ease-in-out 0.8s both;
 }
 
 .menu__dishes-container {
