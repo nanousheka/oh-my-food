@@ -63,7 +63,7 @@
     display: flex;
     justify-content: center;
     @include utils.tablet-screen{
-        background-image: url("../assets/img/hero-image.jpg");
+        background-image: url("/assets/img/hero-image.jpg");
         background-size: auto 540px;
         background-repeat: no-repeat;
         display: flex;
